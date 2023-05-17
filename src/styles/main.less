@@ -1,0 +1,80 @@
+@bgcolor: #dfe6e9;
+@primary: #FFEAA7;
+@secondary: #FFC896;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: @bgcolor;
+}
+
+.container {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    label{
+        font-size: 28px;
+    }
+
+    input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #000;
+        outline: none;
+    }
+
+    button{
+        width: 120px;
+        background-color: @primary;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 30px;
+        height: 30px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: lighten(@primary,5%);
+        }
+    }
+}
+
+#table{
+    width: 100%;
+    text-align: left;
+    border-bottom: 2px solid @secondary;
+    background-color: @primary;
+
+    th{
+        padding-bottom: 10px;
+    }
+
+    td{
+        padding: 20px 0;
+        border-top: 2px solid @secondary;
+    }
+
+    .done{
+        label{
+            font-weight: bold;
+        }
+
+        input:checked{
+            background-color: green;
+        }
+    }
+}
+
